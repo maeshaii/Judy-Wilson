@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaUser, FaBook, FaEnvelope, FaStar, FaSmile, FaShoePrints } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaUser, FaBook, FaEnvelope, FaStar, FaSmile, FaShoePrints,FaQuoteLeft } from 'react-icons/fa';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ const Navigation = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
-      const sections = ['home', 'about', 'book', 'contact'];
+      const sections = ['home', 'about', 'book', 'reviews'];
       const scrollPosition = window.scrollY + 150;
       
       for (const section of sections) {
@@ -34,7 +34,7 @@ const Navigation = () => {
     { name: 'Home', href: '#home', icon: <FaHome size={16} />, id: 'home' },
     { name: 'About', href: '#about', icon: <FaUser size={16} />, id: 'about' },
     { name: 'Book', href: '#book', icon: <FaBook size={16} />, id: 'book' },
-    { name: 'Contact', href: '#contact', icon: <FaEnvelope size={16} />, id: 'contact' },
+    { name: 'Reviews', href: '#reviews', icon: <FaQuoteLeft size={16} />, id: 'reviews' },
   ];
 
   const handleClick = (e, href, id) => {
@@ -58,11 +58,12 @@ const Navigation = () => {
           onClick={(e) => handleClick(e, '#home', 'home')}
         >
           <div className="relative">
-            <FaShoePrints className="text-secondary group-hover:scale-110 transition-transform duration-300" size={22} />
+            <FaBook className="text-secondary group-hover:scale-110 transition-transform duration-300" size={22} color='022658' />
             <FaStar className="text-primary absolute -top-2 -right-2 text-xs opacity-0 group-hover:opacity-100 transition-all duration-300" />
           </div>
-          <span className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-primary to-accent-purple bg-clip-text text-transparent">
-            Ruby Ponder
+          <span className="text-xl md:text-2xl font-display font-bold">
+            <span className="text-[#022658]">Judy</span>{" "}
+            <span className="text-[#b8860b]">Wilson</span>
           </span>
         </a>
 
@@ -116,13 +117,7 @@ const Navigation = () => {
               </a>
             ))}
             
-            <div className="mt-4 pt-4 border-t border-primary/20 text-center">
-              <p className="text-dark/50 text-xs flex items-center justify-center gap-2">
-                <FaShoePrints size={10} className="text-secondary" />
-                Two-Shoes Learning Adventure
-                <FaStar size={10} className="text-primary" />
-              </p>
-            </div>
+
           </div>
         </div>
       )}

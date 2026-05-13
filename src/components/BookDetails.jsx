@@ -1,141 +1,167 @@
-import React from 'react';
-import { FaBook, FaStar, FaQuoteLeft, FaGraduationCap, FaChild, FaSmile, FaComments, FaHeart, FaUser, FaPaintBrush } from 'react-icons/fa';
-import { authorData } from '../data/authorData';
+import React from "react";
+import {
+  FaBook,
+  FaStar,
+  FaQuoteLeft,
+  FaSmile,
+  FaHeart,
+  FaComments,
+} from "react-icons/fa";
+import { authorData } from "../data/authorData";
+import coverImage from "../assets/triumph.png";
 
 const BookDetails = () => {
   const book = authorData.book;
 
-  // Color mapping for figurative language items
-  const getColorClass = (color) => {
-    const colors = {
-      'accent-purple': 'border-accent-purple bg-purple-bg',
-      'accent-blue': 'border-secondary bg-secondary/10',
-      'accent-teal': 'border-primary bg-primary/5',
-      'accent-yellow': 'border-secondary bg-secondary/10',
-      'accent-pink': 'border-accent-purple bg-purple-bg'
-    };
-    return colors[color] || 'border-primary bg-primary/5';
-  };
-
   return (
-    <section id="book" className="py-20 bg-gradient-to-b from-white to-purple-bg/30">
-      <div className="container-custom mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Two-Shoes And Me</h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="section-subtitle">A Colorful Journey Through Figurative Language</p>
+    <section
+      id="book"
+      className="py-24 relative overflow-hidden bg-[#F5E6D3]"
+    >
+      {/* subtle paper texture */}
+      <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#b8860b_1px,transparent_1px)] [background-size:18px_18px]"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#d4b26a] shadow-sm rounded-full text-sm text-[#5c3d00] mb-4">
+            <FaBook />
+            Antique Edition
+          </div>
+
+          <h2 className="text-4xl font-bold text-[#5c3d00]">
+            {book.fullTitle}
+          </h2>
+
+          <p className="text-[#8a6a2f] mt-2">
+            A memoir of survival, hardship, and memory
+          </p>
+    
+          <div className="w-28 h-1 bg-[#b8860b] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="relative">
-            <div className="bg-gradient-to-br from-primary/5 via-secondary/10 to-accent-purple/10 rounded-2xl p-8 shadow-xl border-2 border-secondary/30">
-              <div className="mb-6 relative">
-                <img 
-                  src="/images/twoshoe.jpg"
-                  alt="Two-Shoes And Me - Book Cover"
-                  className="w-full max-w-sm mx-auto rounded-xl shadow-2xl border-4 border-white"
-                />
-                <div className="absolute -top-3 -right-3 bg-secondary text-primary-dark rounded-full p-2 shadow-lg">
-                  <FaStar size={16} />
-                </div>
-              </div>
-              
-              <div className="text-center bg-white rounded-xl p-5 shadow-md">
-                <h3 className="text-2xl font-display font-bold text-primary mb-2">{book.fullTitle}</h3>
-                <div className="w-16 h-0.5 bg-secondary mx-auto my-2"></div>
-                
-                <div className="mt-3 space-y-1">
-                  <p className="text-dark/70 text-sm">
-                    <span className="font-semibold text-primary">Author:</span> {book.author}
-                  </p>
-                  <p className="text-dark/70 text-sm">
-                    <span className="font-semibold text-primary">Illustrator:</span> {book.illustrator}
-                  </p>
-                </div>
-                
-                <div className="flex justify-center gap-1 mt-3">
+        {/* MAIN GRID */}
+        <div className="grid lg:grid-cols-2 gap-14 items-start">
+
+          {/* LEFT: BOOK CARD */}
+          <div className="flex justify-center">
+            <div className="bg-[#fffaf2] rounded-2xl shadow-xl border border-[#d4b26a] p-6 w-full max-w-md">
+
+              <img
+                src={coverImage}
+                alt="Book Cover"
+                className="w-full h-auto max-h-[420px] object-contain rounded-xl  "
+              />
+
+              <div className="text-center mt-6 space-y-2">
+                <p className="font-semibold text-[#5c3d00]">
+                  Triumph (Kindle Edition)
+                </p>
+
+                <p className="text-[#8a6a2f] text-sm">
+                  by Judy Wilson
+                </p>
+
+                <div className="flex justify-center gap-1 mt-2">
                   {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} size={16} className="text-secondary" />
+                    <FaStar key={i} className="text-[#b8860b]" size={14} />
                   ))}
                 </div>
-                <p className="text-xs text-primary mt-2 font-semibold">🎨 A Colorful Learning Adventure 🎨</p>
-              </div>
-              
-              <div className="flex justify-center gap-2 mt-4">
-                <div className="w-8 h-8 bg-primary rounded-full opacity-50"></div>
-                <div className="w-8 h-8 bg-secondary rounded-full opacity-50"></div>
-                <div className="w-8 h-8 bg-accent-purple rounded-full opacity-50"></div>
+
+                <p className="text-xs text-[#5c3d00] font-medium mt-2">
+                  A story written in memory and resilience
+                </p>
               </div>
             </div>
           </div>
 
-          <div>
-            <div className="prose text-dark/80 mb-6">
-              <p className="leading-relaxed text-lg">{book.description}</p>
-            </div>
+          {/* RIGHT: CONTENT */}
+          <div className="space-y-6">
 
-            <div className="mb-6">
-              <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
-                <FaComments size={20} />
-                Figurative Language Explored:
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {book.figurativeLanguage.map((item, idx) => (
-                  <div key={idx} className={`flex items-center gap-3 rounded-lg p-3 shadow-md border-l-4 ${getColorClass(item.color)}`}>
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <p className="font-semibold text-primary text-sm">{item.name}</p>
-                      <p className="text-xs text-dark/50">{item.example}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* DESCRIPTION */}
+            <div className="bg-[#fffaf2] border border-[#d4b26a] rounded-2xl p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-[#5c3d00] mb-3 flex items-center gap-2">
+                <FaComments className="text-[#b8860b]" />
+                Book Overview
+              </h3>
 
-            <div className="bg-purple-bg rounded-xl p-5 shadow-md mb-6 border-l-4 border-secondary">
-              <FaQuoteLeft className="text-secondary mb-2" size={24} />
-              <p className="text-dark/70 italic mb-3 text-sm">
-                "Students will be able to read how figurative language is used in everyday conversations without the awareness of using such language. They will also be able to read and see how figurative language is being used in fiction writing."
+              <p className="text-[#5c3d00] leading-relaxed">
+                <span className="font-semibold">Triumph</span> is a deeply
+                personal memoir written by Judy Wilson. It captures a lifetime
+                of survival through hardship, emotional struggle, and family
+                conflict.
+                <br /><br />
+                It reflects poverty, mental health challenges, and the pursuit
+                of stability in housing, health, and life. The narrative also
+                reaches back through generations, preserving stories from the
+                1800s passed down by the author’s mother.
+                <br /><br />
+                Despite its pain, the memoir carries themes of healing,
+                resilience, and inner peace — a reminder that suffering can
+                transform into strength.
               </p>
-              <div className="flex items-center gap-2 mt-2">
-                <FaHeart className="text-secondary" size={14} />
-                <span className="text-xs text-primary">Perfect for elementary classrooms</span>
-                <FaHeart className="text-secondary" size={14} />
+            </div>
+
+            {/* QUOTE */}
+            <div className="bg-[#022658] border border-[#d4b26a] rounded-2xl p-6">
+              <FaQuoteLeft className="text-[#b8860b] mb-3" />
+
+              <p className="text-[#fffaf2] italic leading-relaxed">
+                “There is light at the end of the rainbow. Even through abuse,
+                mental illness, and hardship, I have found peace and renewal.
+                I am living proof that pain does not last forever.”
+              </p>
+
+              <div className="flex items-center gap-2 mt-4 text-sm text-[#8a6a2f]">
+                <FaHeart className="text-[#b8860b]" />
+                <span>Judy Wilson</span>
+                <FaHeart className="text-[#b8860b]" />
               </div>
             </div>
 
-            <div className="bg-primary/5 rounded-xl p-4 mb-6 border border-secondary/30">
-              <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-                <FaGraduationCap size={18} />
-                Skills Young Readers Will Gain:
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {book.details.skillsDeveloped.map((skill, idx) => (
-                  <span key={idx} className="bg-white px-3 py-1 rounded-full text-sm text-dark/70 shadow-sm border border-secondary/50">
-                    {skill}
-                  </span>
-                ))}
+            {/* THEMES */}
+            <div className="grid sm:grid-cols-2 gap-4">
+
+              <div className="bg-[#fffaf2] border border-[#d4b26a] rounded-xl p-4">
+                <p className="font-semibold text-[#5c3d00]">Family History</p>
+                <p className="text-sm text-[#8a6a2f]">
+                  Generational memory & conflict
+                </p>
+              </div>
+
+              <div className="bg-[#fffaf2] border border-[#d4b26a] rounded-xl p-4">
+                <p className="font-semibold text-[#5c3d00]">Mental Health</p>
+                <p className="text-sm text-[#8a6a2f]">
+                  Depression & emotional pain
+                </p>
+              </div>
+
+              <div className="bg-[#fffaf2] border border-[#d4b26a] rounded-xl p-4">
+                <p className="font-semibold text-[#5c3d00]">Survival</p>
+                <p className="text-sm text-[#8a6a2f]">
+                  Poverty & hardship
+                </p>
+              </div>
+
+              <div className="bg-[#fffaf2] border border-[#d4b26a] rounded-xl p-4">
+                <p className="font-semibold text-[#5c3d00]">Healing</p>
+                <p className="text-sm text-[#8a6a2f]">
+                  Peace, faith & renewal
+                </p>
+              </div>
+
+            </div>
+
+            {/* TAG */}
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fffaf2] border border-[#d4b26a] rounded-full text-sm text-[#5c3d00] shadow-sm">
+                <FaSmile className="text-[#b8860b]" />
+                Memoir • Antique Literature • Life Story
+                <FaSmile className="text-[#b8860b]" />
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-secondary flex-1 text-center flex items-center justify-center gap-2">
-                <FaBook size={16} />
-                Buy Two-Shoes And Me
-              </button>
-              <button className="btn-outline flex-1 text-center flex items-center justify-center gap-2">
-                <FaChild size={16} />
-                Teacher Resources
-              </button>
-            </div>
-
-            <div className="text-center mt-4">
-              <div className="inline-flex items-center gap-2 text-sm text-dark/50 bg-purple-bg px-4 py-2 rounded-full">
-                <FaSmile className="text-secondary" />
-                <span>📚 {book.details.targetAudience}</span>
-                <FaSmile className="text-secondary" />
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
   --font-sans: "Inter", sans-serif;
   
   /* Yellow & Purple Theme for Ruby Ponder */
-  --color-primary: #6B21A5;
+  --color-primary: #022658;
   --color-primary-dark: #4A1D73;
   --color-primary-light: #8B3FD4;
   --color-secondary: #EAB308;
@@ -16,7 +16,7 @@
   --color-dark: #2D1B4E;
   --color-light: #FFFFFF;
   --color-warm: #FEFCE8;
-  --color-purple-bg: #F3E8FF;
+  --color-purple-bg: #8193AC;
 }
 
 @layer base {

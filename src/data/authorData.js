@@ -5,8 +5,8 @@ export const authorData = {
   tagline: "Children's Author | Educator | Figurative Language Specialist",
   
   book: {
-    title: "Two-Shoes And Me",
-    fullTitle: "Two-Shoes And Me",
+    title: "Triumph",
+    fullTitle: "Triumph",
     author: "Ruby D. Ponder",
     illustrator: "Cornice 'DaArtist' Butler",
     description: `This book was written to gain the attention of young readers on the elementary level. After reading TWO-SHOES, these young readers will be able to explore and understand the use of figurative language. (metaphor, idiom, simile, hyperbole, and onomatopoeia) Such figurative language is used in this book to increase student's vocabulary. They will be able to read how figurative language is used in everyday conversations without the awareness of using such language. Students will also be able to read and see how figurative language is being used in fiction writing.`,
