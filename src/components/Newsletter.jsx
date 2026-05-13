@@ -76,19 +76,19 @@ const Newsletter = () => {
               quote:
                 "The book's open, attractive layouts featuring good-looking machines make it a good stocking or saddlebag stuffer for any easy riders on your holiday gift list.",
               name: "Chicago Tribune",
-              role: "Book Review",
+             
             },
             {
               quote:
                 "DK's four Classic Motorcycles mini-volumes bring the publisher's distinctive detailed illustrations, with copious captions, to the subject in clever pocket-sized hardcover form.",
               name: "Chicago Sun-Times",
-              role: "Classic Motorcycles Review",
+             
             },
             {
               quote:
                 "One of the niftiest new collections. You can never have owned a motorcycle and still appreciate the loving detail in these books.",
               name: "Sacramento Bee",
-              role: "Reader Review",
+             
             },
           ].map((review, index) => (
             <div
