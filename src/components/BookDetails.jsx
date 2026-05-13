@@ -25,10 +25,7 @@ const BookDetails = () => {
 
         {/* HEADER */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#d4b26a] shadow-sm rounded-full text-sm text-[#5c3d00] mb-4">
-            <FaBook />
-            Antique Edition
-          </div>
+
 
           <h2 className="text-4xl font-bold text-[#5c3d00]">
             {book.fullTitle}
@@ -151,15 +148,6 @@ const BookDetails = () => {
                 </p>
               </div>
 
-            </div>
-
-            {/* TAG */}
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#fffaf2] border border-[#d4b26a] rounded-full text-sm text-[#5c3d00] shadow-sm">
-                <FaSmile className="text-[#b8860b]" />
-                Memoir • Antique Literature • Life Story
-                <FaSmile className="text-[#b8860b]" />
-              </div>
             </div>
 
           </div>
