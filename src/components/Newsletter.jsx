@@ -65,7 +65,7 @@ const Newsletter = () => {
         </h2>
 
         <p className="text-xl text-[#8a6a2f] mb-10 max-w-2xl mx-auto">
-          What readers and reviewers are saying about the motorcycle book collection.
+          What readers and reviewers are saying about Triumph.
         </p>
 
         {/* REVIEW CARDS */}
@@ -74,19 +74,19 @@ const Newsletter = () => {
           {[
             {
               quote:
-                "The book's open, attractive layouts featuring good-looking machines make it a good stocking or saddlebag stuffer for any easy riders on your holiday gift list.",
-              name: "Chicago Tribune",
+                "Triumph by Judy Wilson is an emotional and inspiring story that explores resilience, family, and personal growth through heartfelt storytelling and memorable characters. The book’s vintage atmosphere and reflective tone create a strong emotional connection, making readers feel deeply involved in the characters’ journeys. One of the strongest aspects of the novel is its ability to balance hardship and hope, showing how perseverance and compassion can shape lives over time. The writing style feels sincere and personal, allowing the themes of faith, endurance, and human connection to stand out naturally. Overall, Triumph is a touching and meaningful read for readers who enjoy character-driven stories filled with emotion, reflection, and inspiration.",
+              name: "Robert Albert",
              
             },
             {
               quote:
-                "DK's four Classic Motorcycles mini-volumes bring the publisher's distinctive detailed illustrations, with copious captions, to the subject in clever pocket-sized hardcover form.",
+                "Judy Wilson’s Triumph is a beautifully written story that combines emotional realism with themes of courage and hope. The characters are portrayed with warmth and authenticity, allowing readers to connect deeply with their experiences and personal challenges. The book gradually builds an inspiring message about overcoming difficulties while holding onto faith, love, and determination. Its emotional sincerity and classic storytelling approach make Triumph an engaging read for anyone who appreciates inspirational fiction with heart.",
               name: "Chicago Sun-Times",
              
             },
             {
               quote:
-                "One of the niftiest new collections. You can never have owned a motorcycle and still appreciate the loving detail in these books.",
+                "Triumph by Judy Wilson delivers a powerful and heartfelt reading experience centered on perseverance, family bonds, and emotional healing. The story captures both the struggles and quiet victories of everyday life, making the characters feel genuine and relatable. The vintage tone and reflective storytelling style give the book a timeless quality that draws readers into its emotional world. Readers who enjoy uplifting stories with meaningful life lessons and strong emotional depth will likely find Triumph both moving and memorable.",
               name: "Sacramento Bee",
              
             },
