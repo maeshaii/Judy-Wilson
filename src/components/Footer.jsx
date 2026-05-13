@@ -93,10 +93,6 @@ const Footer = () => {
                 <span>Triumph</span>
               </div>
 
-              <div className="flex items-center gap-2">
-                <FaHeart className="text-[#b8860b]" />
-                <span>(718) 481-7052</span>
-              </div>
 
             </div>
           </div>
